@@ -1,0 +1,397 @@
+/* header start */
+
+:root {
+  --primary-font: 'Heebo', sans-serif;
+  --bg-color: #282932;
+  --text-white: #ffffff;
+  --text-yellow: #f7b614;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+header {
+  background-color: var(--bg-color) !important;
+  padding: 20px 0;
+  border-bottom: .5px dotted rgba(255, 255, 255, 0.521);
+}
+
+.c_nav {}
+
+
+.navbar-brand img {
+  width: 200px;
+  height: 69px;
+}
+
+.menu {}
+
+.menu ul li a {
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--text-white) !important;
+  padding: 0 15px !important;
+  transition: all .3s;
+}
+
+
+/* .menu ul li:last-child a {
+  padding-right: 0 !important;
+} */
+
+.menu ul li a:hover {
+  color: var(--text-yellow) !important;
+}
+
+
+
+.call-action a {
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 14px;
+  transition: .3s;
+  color: var(--text-yellow) !important;
+}
+
+.call-action a:hover {
+  color: var(--text-white) !important;
+}
+
+.call-action .fa-phone {
+  color: var(--text-white);
+  margin-right: 3px;
+}
+
+/* header end */
+/* banner start */
+#banner {
+  background-color: blue;
+  background-image: url('../../../img/istockphoto-479137569-612x612.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.banner {
+  padding: 190px 0;
+}
+
+.banner-content h1 {
+  font-size: 70px !important;
+  font-weight: 900;
+  color: var(--text-white);
+}
+
+.banner-content h1 span {
+  color: var(--text-yellow);
+}
+
+.banner-content p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  color: var(--text-white);
+}
+
+.b-card {
+  background-color: white;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.b-card:hover {
+  transform: scale(1.1);
+  overflow: hidden;
+  background-color: var(--text-yellow);
+}
+
+.d-parcel {
+  height: 220px !important;
+}
+
+.b-card i {
+  padding: 20px;
+  color: black !important;
+  font-size: 30px;
+  border-radius: 50px;
+  background-color: #f7b614;
+  transition: all .3s;
+}
+
+.b-card:hover i {
+  padding: 20px;
+  color: black !important;
+  font-size: 30px;
+  border-radius: 50px;
+  background-color: var(--text-white);
+}
+
+.b-card p {
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+}
+
+/* banner end */
+
+/* toggler style */
+.navbar-toggler {
+  width: 25px;
+  height: 20px;
+  margin-right: 15px;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  position: relative;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--text-yellow);
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+  position: absolute;
+  top: 0px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  position: absolute;
+  top: 20px;
+  transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+  top: inherit;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  top: inherit;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  top: inherit;
+  transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: white;
+  /* background: linear-gradient(263deg, rgba(252, 74, 74, 1) 0%, rgba(0, 212, 255, 1) 100%); */
+}
+
+/* toggler style */
+
+/* media query */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  /* header start */
+  .menu ul li {
+    padding-top: 10px;
+  }
+
+  .menu ul li a {
+    padding: 5px 0 !important;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .call-action {
+    display: none;
+  }
+
+  /* header end */
+
+  /* banner start */
+  .banner {
+    padding: 60px 0;
+  }
+
+  .banner-content h1 {
+    font-size: 40px !important;
+  }
+
+  .banner-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .b-card {
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .b-card:hover {
+    transform: scale(1);
+    overflow: hidden;
+  }
+
+  /* banner end */
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  /* header start */
+  .menu ul li {
+    padding-top: 10px;
+  }
+
+  .menu ul li a {
+    padding: 5px 0 !important;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .call-action {
+    display: none;
+  }
+
+  /* header end */
+
+  /* banner start */
+  .banner-content h1 {
+    font-size: 60px !important;
+  }
+
+  .banner {
+    padding: 80px 0;
+  }
+
+  .banner-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .b-card {
+    margin-top: 30px;
+  }
+
+  /* banner end */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* header start */
+  .menu ul li {
+    padding-top: 10px;
+  }
+
+  .menu ul li a {
+    padding: 5px 0 !important;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .call-action {
+    display: none;
+  }
+
+  /* header end */
+
+
+  /* banner start */
+  .banner {
+    padding: 100px 0;
+  }
+
+  .banner-content {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .banner-content h1 {
+    font-size: 60px !important;
+  }
+
+  .d-parcel {
+    height: 190px !important;
+  }
+
+  .pick-drop {
+    margin-top: 20px;
+  }
+
+  /* banner end */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* header */
+  .menu ul li a {
+    padding: 0 10px !important;
+  }
+
+  /* banner */
+  .banner-content h1 {
+    font-size: 60px !important;
+  }
+}
+
+/*Extra Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/* Extra Extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+
+/* media query */
